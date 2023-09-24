@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: linear-gradient(45deg, #fceef5, #f3bad6);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #eeeeee 0%, #fceef5 100%);
+  box-shadow: 6px 8px 0 6px #e05297, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.tecla {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 3px 3px #f3bad6;
+  color: #ea86b6;
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: #e05297;
+  border: 4px solid #fceef5;
+  box-shadow: 3px 3px 0 #e05297 inset;
+  color: #fff;
+  outline: none;
+}
+
+.tecla.focus.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px #000;
+}
+
+.tecla.active:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 #e05297 inset, 1px 1px 10px #000;
+}
